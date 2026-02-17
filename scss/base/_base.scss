@@ -1,0 +1,18 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mix;
+@use "sass:map";
+
+.container {
+    inline-size: 100%;
+    max-inline-size: calc(map.get(var.$spacing, 40) * 7 + map.get(var.$spacing, 24) + map.get(var.$special_spacing, 1));
+    margin: calc(map.get(var.$spacing, 40) + map.get(var.$spacing, 32) + map.get(var.$special_spacing, 2)) auto;
+
+    @include mix.respond_to(min, m_screen) {
+        max-inline-size: 40.438em;
+    }
+
+    @include mix.respond_to(min, l_screen) {
+        max-inline-size: 69.625em;
+        margin-block: 8em;
+    }
+}

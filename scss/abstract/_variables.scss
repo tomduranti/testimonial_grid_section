@@ -1,0 +1,37 @@
+@use "./functions" as func;
+@use "sass:map";
+
+// COLOR
+$black: #121212;
+$dark_blue: #19202D;
+$grey: (
+    100: #E7EAEE,
+    200: #CFCFCF,
+    300: #A3AAB4,
+    400: #676D7E,
+    500: #48556A
+);
+$purple: (
+    50: #EDE4FF,
+    300: #A775F1,
+    500: #733FC8
+);
+$white: #FFFFFF;
+
+//TYPOGRAPHY
+$font_family: "Barlow Semi Condensed", sans-serif;
+
+//SPACING
+$spacing: (
+  4:   func.to_rem(4),       
+  8:   func.to_rem(8),
+  16:  func.to_rem(16),
+  24:  func.to_rem(24), 
+  32:  func.to_rem(32),
+  40:  func.to_rem(40),
+);
+
+$special_spacing: (
+  1: func.to_rem(1),
+  2: func.to_rem(2),
+);
